@@ -104,17 +104,14 @@
     }
     p {
       margin: 0;
+      display: flex;
       i {
         padding-right: 5px;
+        color: $dark-gray;
+      }
+      .active {
         color: $yellow;
       }
-    }
-  }
-  p {
-    margin: 0;
-    i {
-      padding-right: 5px;
-      color: $yellow;
     }
   }
 }
