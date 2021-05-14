@@ -1,0 +1,75 @@
+<%= render 'shared/navbar' %>
+
+<div class="banner banner-bookmarks">
+  <h2><%= @list.name %></h2>
+</div>
+
+<div class="container">
+  <div class="add-movie">
+    <a href="#bookmark-form" class='btn btn-success btn-movie'>Add a movie</a>
+  </div>
+
+  <div class="bookmark-cards">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="bookmark-card">
+        <%= image_tag bookmark.movie.poster_url %>
+        <div class="bookmark-card-infos">
+          <h3>
+            <span><%= bookmark.movie.title %></span> - <%= bookmark.movie.rating %>
+            <i class="fas fa-star"></i>
+          </h3>
+          <p><%= bookmark.movie.overview %></p>
+        </div>
+        <div class="bookmark-card-footer">
+          <p>
+            <i class="fas fa-quote-left"></i>
+            <%= bookmark.comment %>
+          </p>
+          <p><%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure ?' } %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <div class="review-box">
+    <div class="review-cards">
+      <h2>Reviews</h2>
+      <% @list.reviews.each do |review| %>
+        <div class="review-card">
+          <div class="review-card-icons">
+            <p>
+              <%= "<i class='fas fa-star'></i>".html_safe * review.rating %>
+            </p>
+            <%= link_to review_path(review), method: :delete, data: { confirm: 'Are you sure ?' } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </div>
+          <p><%= review.comment %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="review-form">
+      <h3>Add your review</h3>
+      <%= simple_form_for [@list, @review] do |f| %>
+        <%= f.input :comment %>
+        <%= f.input :rating, as: :radio_buttons, collection: (1..5).to_a.map { |n| [n, "<i class='fas fa-star'></i>".html_safe] }, value_method: :first, label_method: :second, input_html: { style: "display: none" } %>
+        <%= f.submit class: 'btn btn-success text-white' %>
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="bookmark-form">
+    <h2>Add a movie</h2>
+
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie, collection: Movie.all.order(:title) %>
+      <%= f.submit class: 'btn btn-success text-white'%>
+    <% end %>
+  </div>
+
+</div>

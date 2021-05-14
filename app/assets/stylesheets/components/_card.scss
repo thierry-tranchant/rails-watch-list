@@ -1,0 +1,110 @@
+.list-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.list-card {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://source.unsplash.com/random');
+  background-position: center;
+  color: $light-gray;
+  border-radius: 5px;
+}
+
+.bookmark-cards {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .bookmark-cards {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  }
+}
+
+.bookmark-card {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    height: 300px;
+  }
+}
+
+.bookmark-card-infos {
+  padding: 15px;
+  padding-bottom: 0;
+  h3 {
+    font-size: 20px;
+    span {
+      font-weight: bold;
+    }
+    i {
+    color: $yellow;
+    }
+  }
+}
+
+.bookmark-card-footer {
+  margin-top: auto;
+  padding: 15px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: $red;
+  }
+}
+
+.review-card {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $breakline-gray;
+  margin-bottom: 15px;
+  .review-card-icons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+    i {
+      color: $breakline-gray;
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+    p {
+      margin: 0;
+      i {
+        padding-right: 5px;
+        color: $yellow;
+      }
+    }
+  }
+  p {
+    margin: 0;
+    i {
+      padding-right: 5px;
+      color: $yellow;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#bookmark-form {
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+
+form span input {
+  display: none;
+}
+
+form i {
+  color: $dark-gray;
+}
+
+form i.active {
+  color: $yellow;
+}
+
+fieldset.review_rating {
+  display: flex;
+  // flex-direction: row-reverse;
+  // justify-content: flex-end;
+  .form-check {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+}
+
+.review-form {
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}

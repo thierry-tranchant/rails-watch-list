@@ -1,0 +1,20 @@
+<%= render 'shared/navbar' %>
+
+<div class="banner banner-lists">
+  <h2>Save any kinds of movies</h2>
+  <h4>Classic</h4>
+</div>
+
+<div class="container">
+  <h2>My Lists</h2>
+  <div class="list-cards">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), action: 'go', data: { turbolinks: false } do %>
+    <div class="list-card">
+      <h3><%= list.name %></h3>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+
+</div>
