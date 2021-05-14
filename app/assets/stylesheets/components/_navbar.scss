@@ -8,11 +8,16 @@
   .container {
   display: flex;
   justify-content: space-between;
-  a {
-    color: $dark-gray;
+    a {
+      color: $dark-gray;
+      &:hover {
+        text-decoration: none;
+        color: rgb(20, 20, 20);
+      }
+    }
   }
 }
-}
+
 
 .navbar-logo {
   img {

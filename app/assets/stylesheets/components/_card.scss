@@ -10,7 +10,7 @@
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  grid-gap: 50px;
   }
 }
 
@@ -20,10 +20,18 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
+  transition: 0.3s;
   object-fit: cover;
   color: $light-gray;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.list-cards a:hover {
+  text-decoration: none;
 }
 
 .bookmark-cards {
