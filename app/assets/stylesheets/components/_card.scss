@@ -67,6 +67,10 @@
     background-position: center;
     height: 300px;
   }
+  a:hover {
+    color: $dark-red;
+    text-decoration: none;
+  }
 }
 
 .bookmark-card-infos {
