@@ -1,6 +1,13 @@
 <div class="navbar">
   <div class="container">
-    <%= link_to 'My lists', root_path %>
-    <%= link_to 'New list', new_list_path %>
+    <%= link_to root_path do %>
+    <div class="navbar-logo">
+      <%= image_tag 'popcorn.png' %>
+    </div>
+    <% end %>
+    <div class="navbar-links">
+      <%= link_to 'My lists', root_path %>
+      <%= link_to 'New list', new_list_path %>
+    </div>
   </div>
 </div>

@@ -1,16 +1,28 @@
 .navbar {
-  justify-content: space-between;
   background-color: $nav-gray;
   height: 60px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   a {
     font-weight: bold;
   }
-}
-
-.container {
+  .container {
+  display: flex;
+  justify-content: space-between;
   a {
     color: $dark-gray;
+  }
+}
+}
+
+.navbar-logo {
+  img {
+    height: 40px;
+  }
+}
+
+.navbar-links {
+  a {
+    margin-left: 15px;
   }
 }
 
