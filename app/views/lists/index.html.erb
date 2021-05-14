@@ -10,7 +10,11 @@
   <div class="list-cards">
   <% @lists.each do |list| %>
     <%= link_to list_path(list), action: 'go', data: { turbolinks: false } do %>
-    <div class="list-card">
+    <% if list.photo.attached? %>
+    <div class='list-card' style="background-image: url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>');">
+    <% else %>
+    <div class='list-card' style="background-image: url('https://source.unsplash.com/random');">
+    <% end %>
       <h3><%= list.name %></h3>
     </div>
     <% end %>

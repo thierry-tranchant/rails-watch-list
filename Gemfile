@@ -22,6 +22,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#File storage gem
+gem 'cloudinary', '~> 1.16.0'
+
+
+#Hiding info
 gem 'dotenv-rails', groups: [:development, :test]
 
 

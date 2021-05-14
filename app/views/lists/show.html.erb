@@ -1,6 +1,10 @@
 <%= render 'shared/navbar' %>
 
-<div class="banner banner-bookmarks">
+<% if @list.photo.attached? %>
+<div class="banner" style="background-image: url('<%= cl_image_path @list.photo.key, height: 300 %>'), linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));">
+<% else %>
+<div class="banner" style="background-image: url('https://source.unsplash.com/random'), linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));">
+<% end %>
   <h2><%= @list.name %></h2>
 </div>
 

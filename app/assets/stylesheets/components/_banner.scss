@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   background-size: cover;
+  background-position: center;
   margin-bottom: 30px;
   height: 300px;
   color: $light-gray;
@@ -13,6 +14,6 @@
   background-image: url("https://eus-www.sway-cdn.com/s/6iqrVGENvcQT7sCE/images/TQ0YYAkwl1oSuA?quality=2558&allowAnimation=true&embeddedHost=trues"), linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
 }
 
-.banner-bookmarks {
-  background-image: url("https://source.unsplash.com/random"), linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-}
+// .banner-bookmarks {
+//   background-image: url("https://source.unsplash.com/random"), linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+// }
