@@ -5,6 +5,15 @@
   grid-gap: 30px;
 }
 
+@media (max-width: 992px) {
+  .list-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  }
+}
+
 .list-card {
   height: 200px;
   display: flex;
@@ -13,6 +22,7 @@
   background-position: center;
   color: $light-gray;
   border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .bookmark-cards {
